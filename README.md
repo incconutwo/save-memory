@@ -32,8 +32,6 @@ Bind Save Memory to a three-finger swipe down on the home screen. Walkthrough:
 
 [![Three-finger swipe setup](https://github.com/user-attachments/assets/c531f947-8ca4-49ae-b6f6-4349e60d804d)](https://github.com/user-attachments/assets/c531f947-8ca4-49ae-b6f6-4349e60d804d)
 
-Note: one early tester reported the three-finger swipe didn't trigger on their setup; the app itself worked as expected.
-
 ## Build from source
 
 No Gradle needed. Requires a JDK and the Android SDK (build-tools 36, platform 35):
