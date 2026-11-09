@@ -18,9 +18,7 @@ so you can tell it apart from the main Memory app.
 
 Tap the icon and the app starts `com.samsung.android.app.memory/.feature.capture.ScreenCaptureViewerActivity`, then closes itself. It has no UI of its own.
 
-[![How it works](media/how-it-works.gif)](media/how-it-works.mp4)
-
-*Click the preview for the full-quality video.*
+[![How it works](https://github.com/user-attachments/assets/dde46960-e1f1-4597-9db2-efd20e90bf01)](https://github.com/user-attachments/assets/dde46960-e1f1-4597-9db2-efd20e90bf01)
 
 ## Install
 
@@ -32,9 +30,7 @@ Tap the icon and the app starts `com.samsung.android.app.memory/.feature.capture
 
 Bind Save Memory to a three-finger swipe down on the home screen. Walkthrough:
 
-[![Three-finger swipe setup](media/three-finger-swipe-setup.gif)](media/three-finger-swipe-setup.mp4)
-
-*Click the preview for the full-quality video.*
+[![Three-finger swipe setup](https://github.com/user-attachments/assets/c531f947-8ca4-49ae-b6f6-4349e60d804d)](https://github.com/user-attachments/assets/c531f947-8ca4-49ae-b6f6-4349e60d804d)
 
 Note: one early tester reported the three-finger swipe didn't trigger on their setup; the app itself worked as expected.
 
