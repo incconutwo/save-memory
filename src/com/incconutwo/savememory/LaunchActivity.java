@@ -1,4 +1,4 @@
-package com.pcpicker.memorylauncher;
+package com.incconutwo.savememory;
 
 import android.app.Activity;
 import android.content.ComponentName;

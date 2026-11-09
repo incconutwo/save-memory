@@ -1,49 +1,55 @@
 # Save Memory
 
 A tiny Android app with one job: open the **Samsung Memory** app's capture screen
-(`ScreenCaptureViewerActivity`) as a **real launcher app** — so it shows up in your app
+(`ScreenCaptureViewerActivity`) as a **real launcher app**. It shows up in your app
 drawer, can be pinned to a sidebar (Edge panel / Good Lock Home Up), and can be bound to
 gestures, which a plain shortcut can't do.
 
 It uses Samsung's own Memory icon, pulled from the installed app, with the label **Save Memory**
 so you can tell it apart from the main Memory app.
 
+## Compatibility
+
+- Requires **One UI 9** with the Samsung **Memory** app installed (`com.samsung.android.app.memory`).
+- Tested on a **Galaxy S24+** on One UI 9, with every feature below working. It should work on the S24 and newer.
+- Android 8.0+ (min SDK 26).
+
 ## How it works
 
-Tap the icon -> the app starts `com.samsung.android.app.memory/.feature.capture.ScreenCaptureViewerActivity` and immediately closes itself. No UI of its own.
+Tap the icon and the app starts `com.samsung.android.app.memory/.feature.capture.ScreenCaptureViewerActivity`, then closes itself. It has no UI of its own.
 
-https://github.com/incconutwo/save-memory/raw/main/media/how-it-works.mp4
+[![How it works](media/how-it-works.gif)](media/how-it-works.mp4)
 
-> If GitHub doesn't play it inline, open [`media/how-it-works.mp4`](media/how-it-works.mp4).
+*Click the preview for the full-quality video.*
 
 ## Install
 
-1. Download `MemoryLauncher.apk` from this repo (or build it, see below).
-2. Install it (`adb install -r MemoryLauncher.apk`, or open it on the phone).
-3. Make sure Samsung **Memory** (One UI 9.5, `com.samsung.android.app.memory`) is installed.
+1. Download [`MemoryLauncher.apk`](MemoryLauncher.apk) (or build it, see below).
+2. Install it (`adb install -r MemoryLauncher.apk`, or open the file on the phone).
+3. Open **Save Memory** from the app drawer, or add it to your sidebar.
 
-## Three-finger swipe down gesture (Good Lock > Home Up)
+## Three-finger swipe down (Good Lock > Home Up)
 
-Bind Save Memory to a three-finger swipe down on the home screen. Video walkthrough:
+Bind Save Memory to a three-finger swipe down on the home screen. Walkthrough:
 
-https://github.com/incconutwo/save-memory/raw/main/media/three-finger-swipe-setup.mp4
+[![Three-finger swipe setup](media/three-finger-swipe-setup.gif)](media/three-finger-swipe-setup.mp4)
 
-> Or open [`media/three-finger-swipe-setup.mp4`](media/three-finger-swipe-setup.mp4).
+*Click the preview for the full-quality video.*
 
-Note: reported by an early tester — the three-finger swipe may not trigger on every setup; the app itself works as expected.
+Note: one early tester reported the three-finger swipe didn't trigger on their setup; the app itself worked as expected.
 
 ## Build from source
 
-No Gradle needed. Requires JDK and Android SDK (build-tools 36, platform 35):
+No Gradle needed. Requires a JDK and the Android SDK (build-tools 36, platform 35):
 
 ```powershell
 ./build.ps1
 ```
 
-The script compiles resources with `aapt2`, builds with `javac` + `d8`, then aligns and signs the APK with a locally generated debug key.
+The script compiles resources with `aapt2`, builds with `javac` and `d8`, then aligns and signs the APK with a locally generated debug key.
 
 ## Notes
 
-- Package: `com.pcpicker.memorylauncher`, min SDK 26.
-- Targets the Samsung Memory app only; the activity must be exported on your firmware (it is on One UI 9.5 builds tested).
-- The Memory icon and name belong to Samsung; this project is unofficial and not affiliated with Samsung.
+- Package: `com.incconutwo.savememory`.
+- Targets the Samsung Memory app only, and the activity must be exported on your firmware.
+- The Memory icon and name belong to Samsung. This project is unofficial and not affiliated with Samsung.
