@@ -22,7 +22,7 @@ Tap the icon and the app starts `com.samsung.android.app.memory/.feature.capture
 
 ## Install
 
-1. Download [`MemoryLauncher.apk`](MemoryLauncher.apk) (or build it, see below).
+1. Download the APK from the [latest release](https://github.com/incconutwo/save-memory/releases/latest) (or build it, see below).
 2. Install it (`adb install -r MemoryLauncher.apk`, or open the file on the phone).
 3. Open **Save Memory** from the app drawer, or add it to your sidebar.
 
